@@ -1,0 +1,51 @@
+@function fx($x) {
+	@return $x / 64 * 1rem; //按640的设计稿，统一宽度10rem;
+}
+
+@function fx1($x) {
+	@return $x / 32 * 1rem; //按320的设计稿，统一宽度10rem;
+}
+
+@function fx2($x) {
+    @return $x / 36 * 1rem; //按360的设计稿，统一宽度10rem;
+}
+
+@function fx3($x) {
+    @return $x / 37.5 * 1rem; //按375的设计稿，统一宽度10rem;
+}
+
+@function fx4($x) {
+    @return $x / 54 * 1rem; //按540的设计稿，统一宽度10rem;
+}
+
+@function fx6($x) {
+    @return $x / 75 * 1rem; //按750的设计稿，统一宽度10rem;
+}
+
+// retina 图片
+@mixin image-set($filename, $extension) {
+	background-image: url("#{$filename}.#{$extension}");
+    background-image: image-set(url("#{$filename}.#{$extension}") 1x, url(#{$filename}@2x.#{$extension}) 2x, url(#{$filename}@3x.#{$extension}) 3x);
+}
+
+//0.5px border
+@mixin bor($color, $dir:bottom, $pos: relative) {
+    position: $pos;
+	&::after {
+		content: '';
+		position: absolute;
+		#{$dir}: 0;
+		background: $color;
+		@if $dir == 'bottom' or $dir == 'top' {
+				width: 100%;
+				transform: scaleY(0.5);
+				left: 0;
+				height: 1px; /*no*/
+		} @else {
+				height: 100%;
+				transform: scaleX(0.5);
+				top: 0;
+				width: 1px; /*no*/
+		}
+	}
+}
