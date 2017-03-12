@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var SpritesmithPlugin = require('webpack-spritesmith');
 var fs = require('fs');
 var ip = require('ip');
+var autoprefixer = require("autoprefixer");
 const localIp = ip.address();
 
 // 引入css 单独打包插件
@@ -130,7 +131,14 @@ module.exports = {
       {
         test: /\.(png|jpg|gif)$/,
         loader: "url?name=[path][name]-[hash:5].[ext]&limit=2048"
+      },
+      {
+          test: /\.html$/,
+          loader: "html?minimize=false"
       }
     ]
+  },
+  postcss: function() {
+    return [autoprefixer];
   }
 }

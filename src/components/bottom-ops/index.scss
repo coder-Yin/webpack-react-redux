@@ -5,9 +5,10 @@
   width: 100%;
   height: 110px;
   box-sizing: border-box;
-  border-top: 1px solid #cccbcb;
+  border-top: 1px solid #cccbcb; /*no*/
   display: flex;
   transform: rotate(0);
+  background: #fff;
 }
 
 .a{

@@ -1,0 +1,35 @@
+@import "base.scss";
+
+.root {
+	position: relative;
+	background: #fff;
+	height: 100%;
+	width: 100%;
+}
+
+.loading {
+	position: absolute;
+	height: 80px;
+	width: 80px;
+	left: 50%;
+	top: 50%;
+	margin: -40px 0px 0px -40px;
+	background: 0 0 url(./images/loading_bg.png) no-repeat;
+	background-size: 100%;
+}
+
+@keyframes loadingMove {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+.loading-move {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: 0 0 url(./images/loading_move.png) no-repeat;
+	background-size: 100%;
+	animation: loadingMove 1s linear infinite;
+}

@@ -12,7 +12,7 @@ export default class BottomOps extends Component {
     render() {
 
         let {type} = this.props;
-        
+
         return (
             <div className={`${styles.wrap} clearfix`}>
               <a href="#" className={styles.a}>
@@ -24,7 +24,7 @@ export default class BottomOps extends Component {
               <a href="#" className={styles.a}>
                 <div className={styles.content}>
                   <span className={`${styles.icon} ${type == 2 ? styles.icon1 : styles.icon2_gray}`}></span>
-                  <div className={styles.text}>我的</div>
+                  <div className={type == 2 ? styles.textActive : styles.text}>我的</div>
                 </div>
               </a>
             </div>

@@ -115,14 +115,16 @@ module.exports = {
         loaders: ['style?sourceMap', 'css?modules&importLoaders=1&localIdentName=[path]_[name]__[local]___[hash:base64:5]&sourceMap', 'px2rem?remUnit=75', 'sass?sourceMap']
       },
       {
-        test: /\.scss\?p6_no$/,
-        loaders: ['style', 'css?modules&importLoaders=1&localIdentName=[path]_[name]__[local]___[hash:base64:5]&sourceMap', 'px2rem?remUnit=75', 'sass']
+        test: /\.scss\?p6_nomodule$/,
+        loaders: ['style', 'css', 'px2rem?remUnit=75', 'sass']
       },
       {
-        test: /\.png$/,
-        loaders: [
-                'file?name=i/[hash].[ext]'
-              ]
+        test: /\.(png|jpg|gif)$/,
+        loaders: ['file?name=i/[hash].[ext]&limit=2048']
+      },
+      {
+          test: /\.html$/,
+          loader: "html?minimize=false"
       }
     ]
   },

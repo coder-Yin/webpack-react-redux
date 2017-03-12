@@ -27,7 +27,7 @@ export default class Wrap extends Component {
                 }
                 {
                   !isError &&
-                    <div>
+                    <div className={styles.container}>
                       <Content {...param_content} />
                       <BottomOps type={1} />
                     </div>
