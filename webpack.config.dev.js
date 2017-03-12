@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var SpritesmithPlugin = require('webpack-spritesmith');
 var fs = require('fs');
 var ip = require('ip');
+var autoprefixer = require("autoprefixer");
 const localIp = ip.address();
 
 let ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -67,18 +68,21 @@ function getPlugins() {
 }
 
 module.exports = {
-  // devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   entry: getEntries(getPages()),
   output: {
-      path: path.join(__dirname, "dist/"),
+      path: path.join(__dirname, "dist/mc"),
       filename: "[name]/bundle.js",
       // chunkFilename: "app/[name]/bundle[id][hash:5].js",
-      publicPath: "http://"+localIp+":3000/",
+      publicPath: "http://"+localIp+":3000/mc",
       pathinfo: true
   },
   plugins: getPlugins(),
   resolve: {
-    modulesDirectories: ["node_modules", "spritesmith"]
+    // modulesDirectories: ["node_modules", "spritesmith"]
+    root: ["src/lib", "node_modules"],
+    modulesDirectories: ["node_modules", "src/components", "src/lib"],
+    extensions: ['', '.js', '.scss']
   },
   sassLoader: {
     includePaths: [path.resolve(__dirname, "./src/styles")]
@@ -99,7 +103,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: ['style', 'css'],
+        loaders: ['style', 'css?autoprefixer'],
         include: __dirname
       },
       {
@@ -108,11 +112,11 @@ module.exports = {
       },
       {
         test: /\.scss\?p6$/,
-        loaders: ['style', 'css', 'px2rem?remUnit=37.5', 'sass']
+        loaders: ['style?sourceMap', 'css?modules&importLoaders=1&localIdentName=[path]_[name]__[local]___[hash:base64:5]&sourceMap', 'px2rem?remUnit=75', 'sass?sourceMap']
       },
       {
-        test: /\.scss\?p5$/,
-        loaders: ['style', 'css?modules&importLoaders=1&localIdentName=[path]_[name]__[local]___[hash:base64:5]&sourceMap', 'px2rem?remUnit=32', 'sass']
+        test: /\.scss\?p6_no$/,
+        loaders: ['style', 'css?modules&importLoaders=1&localIdentName=[path]_[name]__[local]___[hash:base64:5]&sourceMap', 'px2rem?remUnit=75', 'sass']
       },
       {
         test: /\.png$/,
@@ -121,5 +125,8 @@ module.exports = {
               ]
       }
     ]
+  },
+  postcss: function() {
+    return [autoprefixer];
   }
 }

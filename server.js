@@ -11,7 +11,7 @@ app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output
 app.use(webpackHotMiddleware(compiler))
 
 app.get("/", function(req, res) {
-  res.sendFile(__dirname + '/src/app/test/index.html')
+  res.sendFile(__dirname + '/src/app/index/index.html')
 })
 
 // app.get("/index.html", function(req, res) {

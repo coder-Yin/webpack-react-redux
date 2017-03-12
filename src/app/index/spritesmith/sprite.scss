@@ -1,0 +1,211 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-see-name: 'icon_see';
+$icon-see-x: 0px;
+$icon-see-y: 0px;
+$icon-see-offset-x: 0px;
+$icon-see-offset-y: 0px;
+$icon-see-width: 40px;
+$icon-see-height: 26px;
+$icon-see-total-width: 109px;
+$icon-see-total-height: 862px;
+$icon-see-image: '../../spritesmith/sprite.png';
+$icon-see: (0px, 0px, 0px, 0px, 40px, 26px, 109px, 862px, '../../spritesmith/sprite.png', 'icon_see', );
+$icon-collect-name: 'icon_collect';
+$icon-collect-x: 0px;
+$icon-collect-y: 36px;
+$icon-collect-offset-x: 0px;
+$icon-collect-offset-y: -36px;
+$icon-collect-width: 37px;
+$icon-collect-height: 29px;
+$icon-collect-total-width: 109px;
+$icon-collect-total-height: 862px;
+$icon-collect-image: '../../spritesmith/sprite.png';
+$icon-collect: (0px, 36px, 0px, -36px, 37px, 29px, 109px, 862px, '../../spritesmith/sprite.png', 'icon_collect', );
+$icon-tagmoney-name: 'icon_tagmoney';
+$icon-tagmoney-x: 0px;
+$icon-tagmoney-y: 75px;
+$icon-tagmoney-offset-x: 0px;
+$icon-tagmoney-offset-y: -75px;
+$icon-tagmoney-width: 35px;
+$icon-tagmoney-height: 33px;
+$icon-tagmoney-total-width: 109px;
+$icon-tagmoney-total-height: 862px;
+$icon-tagmoney-image: '../../spritesmith/sprite.png';
+$icon-tagmoney: (0px, 75px, 0px, -75px, 35px, 33px, 109px, 862px, '../../spritesmith/sprite.png', 'icon_tagmoney', );
+$icon-tagname-name: 'icon_tagname';
+$icon-tagname-x: 0px;
+$icon-tagname-y: 118px;
+$icon-tagname-offset-x: 0px;
+$icon-tagname-offset-y: -118px;
+$icon-tagname-width: 38px;
+$icon-tagname-height: 39px;
+$icon-tagname-total-width: 109px;
+$icon-tagname-total-height: 862px;
+$icon-tagname-image: '../../spritesmith/sprite.png';
+$icon-tagname: (0px, 118px, 0px, -118px, 38px, 39px, 109px, 862px, '../../spritesmith/sprite.png', 'icon_tagname', );
+$icon-my-name: 'icon_my';
+$icon-my-x: 0px;
+$icon-my-y: 167px;
+$icon-my-offset-x: 0px;
+$icon-my-offset-y: -167px;
+$icon-my-width: 45px;
+$icon-my-height: 47px;
+$icon-my-total-width: 109px;
+$icon-my-total-height: 862px;
+$icon-my-image: '../../spritesmith/sprite.png';
+$icon-my: (0px, 167px, 0px, -167px, 45px, 47px, 109px, 862px, '../../spritesmith/sprite.png', 'icon_my', );
+$icon-touch-name: 'icon_touch';
+$icon-touch-x: 0px;
+$icon-touch-y: 224px;
+$icon-touch-offset-x: 0px;
+$icon-touch-offset-y: -224px;
+$icon-touch-width: 45px;
+$icon-touch-height: 53px;
+$icon-touch-total-width: 109px;
+$icon-touch-total-height: 862px;
+$icon-touch-image: '../../spritesmith/sprite.png';
+$icon-touch: (0px, 224px, 0px, -224px, 45px, 53px, 109px, 862px, '../../spritesmith/sprite.png', 'icon_touch', );
+$icon-nt-name: 'icon_nt';
+$icon-nt-x: 0px;
+$icon-nt-y: 287px;
+$icon-nt-offset-x: 0px;
+$icon-nt-offset-y: -287px;
+$icon-nt-width: 80px;
+$icon-nt-height: 80px;
+$icon-nt-total-width: 109px;
+$icon-nt-total-height: 862px;
+$icon-nt-image: '../../spritesmith/sprite.png';
+$icon-nt: (0px, 287px, 0px, -287px, 80px, 80px, 109px, 862px, '../../spritesmith/sprite.png', 'icon_nt', );
+$icon-pyq-name: 'icon_pyq';
+$icon-pyq-x: 0px;
+$icon-pyq-y: 377px;
+$icon-pyq-offset-x: 0px;
+$icon-pyq-offset-y: -377px;
+$icon-pyq-width: 80px;
+$icon-pyq-height: 80px;
+$icon-pyq-total-width: 109px;
+$icon-pyq-total-height: 862px;
+$icon-pyq-image: '../../spritesmith/sprite.png';
+$icon-pyq: (0px, 377px, 0px, -377px, 80px, 80px, 109px, 862px, '../../spritesmith/sprite.png', 'icon_pyq', );
+$icon-qt-name: 'icon_qt';
+$icon-qt-x: 0px;
+$icon-qt-y: 467px;
+$icon-qt-offset-x: 0px;
+$icon-qt-offset-y: -467px;
+$icon-qt-width: 80px;
+$icon-qt-height: 80px;
+$icon-qt-total-width: 109px;
+$icon-qt-total-height: 862px;
+$icon-qt-image: '../../spritesmith/sprite.png';
+$icon-qt: (0px, 467px, 0px, -467px, 80px, 80px, 109px, 862px, '../../spritesmith/sprite.png', 'icon_qt', );
+$icon-hz-name: 'icon_hz';
+$icon-hz-x: 0px;
+$icon-hz-y: 557px;
+$icon-hz-offset-x: 0px;
+$icon-hz-offset-y: -557px;
+$icon-hz-width: 80px;
+$icon-hz-height: 80px;
+$icon-hz-total-width: 109px;
+$icon-hz-total-height: 862px;
+$icon-hz-image: '../../spritesmith/sprite.png';
+$icon-hz: (0px, 557px, 0px, -557px, 80px, 80px, 109px, 862px, '../../spritesmith/sprite.png', 'icon_hz', );
+$icon-zjy-name: 'icon_zjy';
+$icon-zjy-x: 0px;
+$icon-zjy-y: 647px;
+$icon-zjy-offset-x: 0px;
+$icon-zjy-offset-y: -647px;
+$icon-zjy-width: 109px;
+$icon-zjy-height: 102px;
+$icon-zjy-total-width: 109px;
+$icon-zjy-total-height: 862px;
+$icon-zjy-image: '../../spritesmith/sprite.png';
+$icon-zjy: (0px, 647px, 0px, -647px, 109px, 102px, 109px, 862px, '../../spritesmith/sprite.png', 'icon_zjy', );
+$icon-zrm-name: 'icon_zrm';
+$icon-zrm-x: 0px;
+$icon-zrm-y: 759px;
+$icon-zrm-offset-x: 0px;
+$icon-zrm-offset-y: -759px;
+$icon-zrm-width: 109px;
+$icon-zrm-height: 103px;
+$icon-zrm-total-width: 109px;
+$icon-zrm-total-height: 862px;
+$icon-zrm-image: '../../spritesmith/sprite.png';
+$icon-zrm: (0px, 759px, 0px, -759px, 109px, 103px, 109px, 862px, '../../spritesmith/sprite.png', 'icon_zrm', );
+$spritesheet-width: 109px;
+$spritesheet-height: 862px;
+$spritesheet-image: '../../spritesmith/sprite.png';
+$spritesheet-sprites: ($icon-see, $icon-collect, $icon-tagmoney, $icon-tagname, $icon-my, $icon-touch, $icon-nt, $icon-pyq, $icon-qt, $icon-hz, $icon-zjy, $icon-zrm, );
+$spritesheet: (109px, 862px, '../../spritesmith/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

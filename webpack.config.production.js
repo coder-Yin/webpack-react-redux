@@ -76,15 +76,18 @@ module.exports = {
   // devtool: 'cheap-module-eval-source-map',
   entry: getEntries(getPages()),
   output: {
-      path: path.join(__dirname, "dist/"),
+      publicPath: "./mc/",
+      path: path.join(__dirname, "dist/mc"),
       filename: "[name]/bundle.js",
       // chunkFilename: "app/[name]/bundle[id][hash:5].js",
-      publicPath: "http://"+localIp+":3000/",
       pathinfo: true
   },
   plugins: getPlugins(),
   resolve: {
-    modulesDirectories: ["node_modules"]
+    // modulesDirectories: ["node_modules"],
+    root: ["src/lib", "node_modules"],
+    modulesDirectories: ["node_modules", "src/components", "src/lib"],
+    extensions: ['', '.js', '.scss']
   },
   sassLoader: {
     includePaths: [path.resolve(__dirname, "./src/styles")]
@@ -114,17 +117,19 @@ module.exports = {
       },
       {
         test: /\.scss\?p6$/,
-        loader: packSASS.extract(['css', 'px2rem?remUnit=37.5', 'sass?outputStyle=compact'])
+        loader: packSASS.extract(['css?modules&importLoaders=1&localIdentName=[path]_[name]__[local]___[hash:base64:5]&sourceMap', 'px2rem?remUnit=75', 'sass?outputStyle=compact'])
+      },
+      {
+        test: /\.scss\?p6_no$/,
+        loader: packSASS.extract(['css?modules&importLoaders=1&localIdentName=[hash:base64:8]', 'sass?outputStyle=compact'])
       },
       {
         test: /\.scss\?p5$/,
-        loader: packSASS.extract(['css', 'px2rem?remUnit=32', 'sass?outputStyle=compact'])
+        loader: packSASS.extract(['css?modules&importLoaders=1&localIdentName=[hash:base64:8]', 'px2rem?remUnit=32', 'sass?outputStyle=compact'])
       },
       {
-        test: /\.png$/,
-        loaders: [
-          'file?name=i/[hash].[ext]'
-        ]
+        test: /\.(png|jpg|gif)$/,
+        loader: "url?name=[path][name]-[hash:5].[ext]&limit=2048"
       }
     ]
   }
