@@ -14,6 +14,10 @@ app.get("/", function(req, res) {
   res.sendFile(__dirname + '/src/app/index/index.html')
 })
 
+app.get("/test", function(req, res) {
+  res.sendFile(__dirname + '/src/app/test/index.html')
+})
+
 // app.get("/index.html", function(req, res) {
 //   res.sendFile(__dirname + '/index.html')
 // })
