@@ -34,7 +34,10 @@ function getEntries(pages) {
 function getPlugins() {
     let spritesmithPlugins = [
       new webpack.optimize.OccurenceOrderPlugin(),
-      new webpack.HotModuleReplacementPlugin()
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.DefinePlugin({
+            localIp: JSON.stringify(localIp)
+        })
     ];
     let apps = fs.readdirSync("./src/app/");
     for (let app of apps) {

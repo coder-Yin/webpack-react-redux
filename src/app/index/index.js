@@ -1,4 +1,4 @@
-__webpack_public_path__ = '123';
+import 'publicPath.js';
 import store from './react/store';
 import Container from './react/container';
 import React from 'react';

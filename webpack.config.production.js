@@ -77,11 +77,11 @@ module.exports = {
   // devtool: 'cheap-module-eval-source-map',
   entry: getEntries(getPages()),
   output: {
-      publicPath: "./mc/",
       path: path.join(__dirname, "dist/mc"),
       filename: "[name]/bundle.js",
       // chunkFilename: "app/[name]/bundle[id][hash:5].js",
-      pathinfo: true
+      pathinfo: true,
+      publicPath: "http://"+localIp+":3000/mc"
   },
   plugins: getPlugins(),
   resolve: {
@@ -123,6 +123,10 @@ module.exports = {
       {
         test: /\.scss\?p6_no$/,
         loader: packSASS.extract(['css?modules&importLoaders=1&localIdentName=[hash:base64:8]', 'sass?outputStyle=compact'])
+      },
+      {
+        test: /\.scss\?p6_nomodule$/,
+        loader: packSASS.extract(['css', 'sass?outputStyle=compact'])
       },
       {
         test: /\.scss\?p5$/,

@@ -13,7 +13,7 @@ export default class Head extends Component {
 
         return (
             <div className={styles.root}>
-             <img src="./images/banner.png" />
+             <img src={require('./images/banner.png')} />
             </div>
         );
     }
