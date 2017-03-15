@@ -4,6 +4,7 @@ import Container from './react/container';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
+import './app.scss'
 
 ReactDOM.render(
   <Provider store={store}>

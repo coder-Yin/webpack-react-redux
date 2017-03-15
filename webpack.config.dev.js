@@ -115,7 +115,7 @@ module.exports = {
       },
       {
         test: /\.scss\?p6$/,
-        loaders: ['style?sourceMap', 'css?modules&importLoaders=1&localIdentName=[path]_[name]__[local]___[hash:base64:5]&sourceMap', 'px2rem?remUnit=75', 'sass?sourceMap']
+        loaders: ['style?sourceMap', 'css?modules&importLoaders=1&localIdentName=[path]_[name]__[local]___[hash:base64:5]&sourceMap', 'px2rem?remUnit=75','postcss?sourceMap', 'sass?sourceMap&outputStyle=compact']
       },
       {
         test: /\.scss\?p6_nomodule$/,

@@ -1,0 +1,49 @@
+.content{
+  padding: 18px 15px;
+}
+
+.li{
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
+  background: #fff;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.li:last-child{
+  margin-bottom: 0;
+}
+
+.top{
+  position: relative;
+  padding: 35px 20px 20px 105px;
+  border: 1px solid #f3f3f3;
+  font-size: 28px;
+  color: #262626;
+}
+
+.title{
+  font-weight: bold;
+}
+
+.subTitle{
+  margin-top: 35px;
+}
+
+.bottom{
+  position: relative;
+  padding: 19px 0 19px 140px;
+}
+
+.right{
+  font-size: 28px;
+  color: #6d6d6d;
+}
+
+.stress{
+  color: #373737;
+}
+
+.mt{
+  margin-top: 15px;
+}
