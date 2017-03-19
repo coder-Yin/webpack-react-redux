@@ -9,6 +9,10 @@ export default class Select extends Component {
     componentDidMount() {
     }
 
+    shouldComponentUpdate() {
+      return false;
+    }
+
     render() {
 
         return (

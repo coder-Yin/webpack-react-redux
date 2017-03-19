@@ -2,6 +2,7 @@ var webpack = require('webpack')
 var webpackDevMiddleware = require('webpack-dev-middleware')
 var webpackHotMiddleware = require('webpack-hot-middleware')
 var config = require('./webpack.config')
+var fs = require('fs')
 
 var app = new (require('express'))()
 var port = 3000
@@ -14,17 +15,12 @@ app.get("/", function(req, res) {
   res.sendFile(__dirname + '/src/app/index/index.html')
 })
 
-app.get("/my", function(req, res) {
-  res.sendFile(__dirname + '/src/app/my/index.html')
-})
-
-app.get("/test", function(req, res) {
-  res.sendFile(__dirname + '/src/app/test/index.html')
-})
-
-// app.get("/index.html", function(req, res) {
-//   res.sendFile(__dirname + '/index.html')
-// })
+let directories = fs.readdirSync(__dirname+"/src/app");
+for (let dir of directories) {
+  app.get("/"+dir, function(req, res) {
+    res.sendFile(__dirname + '/src/app/'+dir+'/index.html')
+  })
+}
 
 //
 // app.get("/sta/css/bootstrap.min.css", function(req, res) {

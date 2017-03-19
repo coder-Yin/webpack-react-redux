@@ -1,0 +1,18 @@
+.wrap{
+  position: relative;
+  height: 100%;
+}
+
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: #f0efef;
+}
+
+.text{
+  font-size: 28px;
+  color: #6d6d6d;
+}

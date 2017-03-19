@@ -1,0 +1,30 @@
+.wrap{
+  position: relative;
+  height: 100%;
+}
+
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: #f0efef;
+}
+
+.icon{
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+  background: url(./images/icon_error.png) no-repeat;
+  background-size: contain;
+}
+
+.mt{
+  margin-top: 40px;
+}
+
+.text{
+  font-size: 28px;
+  color: #6d6d6d;
+}

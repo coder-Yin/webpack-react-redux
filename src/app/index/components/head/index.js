@@ -9,11 +9,15 @@ export default class Head extends Component {
     componentDidMount() {
     }
 
+    shouldComponentUpdate() {
+      return false;
+    }
+
     render() {
 
         return (
             <div className={styles.root}>
-             <img src={require('./images/banner.png')} />
+             <img src={require('./images/banner.png')} className={styles.img} />
             </div>
         );
     }

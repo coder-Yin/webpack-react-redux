@@ -14,7 +14,9 @@ export default function mapState(state) {
         isLoading,
         isError,
         param_error: {
-
+          fnReload: () => {
+            location.href = location.href;
+          }
         },
         param_content: {
 
